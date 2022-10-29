@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h1 class="text-center text-warning">Book A Ride</h1>
+    <form action="{% url 'bookaride' %}" method="POST">
+        {% csrf_token %}
+        <div class="row g-3 mb-3">
+            <div class="col">
+              <input type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="DOB" placeholder="Date of Birth" aria-label="Last name" required>
+            </div>
+          </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+              <input type="email" class="form-control" name="email" placeholder="Email" aria-label="First name" required>
+            </div>
+            <div class="col">
+              <input type="number" class="form-control" placeholder="phone" aria-label="Last name" required>
+            </div>
+            <div class="col">
+                <select class="form-select" name="gender" aria-label="Default select example" required>
+                    <option selected>Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">None</option>
+                  </select>
+            </div>
+          </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+                <select class="form-select" name="city" aria-label="Default select example" required>
+                    <option selected>City</option>
+                    <option value="1">Gadag</option>
+                    <option value="2">Hubli</option>
+                    <option value="3">Dharwad</option>
+                  </select>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="pick_up" placeholder="Pick up address" aria-label="Last name" required> 
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="drop_addr" placeholder="Drop Address" aria-label="Last name" required>
+            </div>
+          </div>
+        <button type="submit " class="d-grid gap-2 col-6 mx-auto btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

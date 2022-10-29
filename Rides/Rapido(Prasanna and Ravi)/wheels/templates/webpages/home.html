@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- jumbotron wrapper -->
+<div class="container animate__animated animate__fadeInLeft">
+  <div class="text-center">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-white">--:Hello Customer:--</h1>
+        <p class="lead text-white">
+          Due to Lack of Man Power, We are Available at some of the Selected Cities of Karnataka...
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Caaaaaaaaaaaaaaaaards-->
+
+<div class="container animate__animated animate__bounceInUp">
+  <div class="row row-cols-2">
+    {% for c in Homecard  %}
+    <div class="col">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ c.photo.url }}" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{c.city}}</h5>
+              <p class="card-text">{{c.desc|safe}}</p>
+              <p class="card-text">
+                <small class="text-muted">{{c.rto_no}}</small>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock %}

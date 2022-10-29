@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2 class="text-center">Welcome To Bikers Family</h2>
+<h4 class="text-center">Feel Like It's Your Own Bike and Enjoy the Ride by Your Own. </h4>
+<form action="{% url 'careers' %}" method="POST">
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                alt="Sample photo" class="img-fluid"
+                                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Register As a Rider</h3>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="firstname"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" name="firstname" placeholder="firstname" for="form3Example1m">First name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="lastname"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" name="lastname" placeholder="lastname" for="form3Example1n">Last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="number" id="aadhar_no"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" name="aadhar_no" placeholder="aadhar_no" for="form3Example1m1">Aadhar-Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="number" id="phone"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" name="phone" placeholder="phone" for="form3Example1n1">Phone-Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="email" class="form-control form-control-lg" />
+                                    <label class="form-label" name="email" placeholder="email" for="form3Example97">Email ID</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="curr_address" placeholder="Ex- Area  Street  City"
+                                        aria-label="Ex- Area  Street  City" class="form-control form-control-lg" />
+                                    <label class="form-label" name="curr_address" placeholder="curr_address" for="form3Example8">Current-Address</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="perm_address" placeholder="Ex- Area  Street  City"
+                                        aria-label="Ex- Area  Street  City" class="form-control form-control-lg" />
+                                    <label class="form-label" name="perm_address" placeholder="perm_address" for="form3Example8">Permanent-Address</label>
+                                </div>
+
+
+
+                                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                                    <h6 class="mb-0 me-4">Gender: </h6>
+
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="femaleGender" value="option1" />
+                                        <label class="form-check-label" for="femaleGender">Female</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="maleGender" value="option2" />
+                                        <label class="form-check-label" for="maleGender">Male</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline mb-0">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="otherGender" value="option3" />
+                                        <label class="form-check-label" for="otherGender">Other</label>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="dl_no" class="form-control form-control-lg" />
+                                    <label class="form-label" name="dl_no" placeholder="dl_no" for="form3Example9">Enter Your DL-Number</label>
+                                </div>
+
+
+                                <h6 class="mb-2 pb-1">Do you Have Bike</h6>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="is_bike_active" value="option1" checked />
+                                    <label class="form-check-label" name="is_bike_active" placeholder="is_bike_active" for="femaleGender">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="is_bike_active" value="option2" />
+                                    <label class="form-check-label" name="is_bike_active" placeholder="is_bike_active" for="maleGender">No</label>
+                                </div>
+
+
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form3Example90" placeholder="Ex  -  KA25EY7870"
+                                        aria-label="Eg:KA25EY7870" class="form-control form-control-lg" />
+                                    <label class="form-label" for="form3Example90">If Yes Enter Your "Bike RC-Number"/
+                                        If No Enter
+                                        "NA"</label>
+                                </div>
+
+
+
+
+
+                                <div class="d-flex justify-content-end pt-3">
+                                    <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                                    <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</form>
+{% endblock %}

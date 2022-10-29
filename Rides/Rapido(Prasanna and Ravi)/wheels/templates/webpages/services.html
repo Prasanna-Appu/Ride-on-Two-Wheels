@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- cards -->
+<div class="container animate__animated animate__pulse">
+  <div class="col mt-4">
+    <div class="card bg-dark text-white">
+      <img src="{% static 'images_12.jpeg' %}" class="card-img" height="400px" alt="Stony Beach" />
+      <div class="card-img-overlay">
+        <h5 class="card-title">Book A Ride</h5>
+        <p class="card-text">
+          We will pick you up from where you are and Drop You down Where you Need to be
+        </p>
+        <p class="card-text">Last updated 3 mins ago</p>
+        <a href="{% url 'bookarider' %}" type="submit" class="btn btn-primary">Book a Ride</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mt-4">
+    <div class="card bg-dark text-white">
+      <img src="{% static 'bikecard.webp' %}" class="card-img" height="400px" alt="Stony Beach" />
+      <div class="card-img-overlay">
+        <h5 class="card-title">Emergency Ride</h5>
+        <p class="card-text">
+          We will pick you up from where you are and Drop You down Where you Need to be
+        </p>
+        <p class="card-text">Last updated 3 mins ago</p>
+        <a href="{% url 'emergency' %}" type="submit" class="btn btn-primary">Emergency Ride</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mt-4">
+    <div class="card bg-dark text-white">
+      <img src="{% static 'self_drive_bikes.png' %}" class="card-img" height="400px" alt="Stony Beach" />
+      <div class="card-img-overlay">
+        <h5 class="card-title">Rent A Bike</h5>
+        <p class="card-text">
+          We will pick you up from where you are and Drop You down Where you Need to be
+        </p>
+        <p class="card-text">Last updated 3 mins ago</p>
+        <a href="{% url 'rentBike' %}" type="submit" class="btn btn-primary">Rent A Bike</a>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  {% endblock%}

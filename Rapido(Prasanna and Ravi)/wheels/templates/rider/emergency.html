@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h1 class="text-center text-warning">Emergency Ride</h1>
+    <form action="{% url 'emergency' %}" method="POST">
+        {% csrf_token %}
+        <div class="row g-3 mb-3">
+            <div class="col">
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" aria-label="Last name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone-number" aria-label="Phone-number" required>
+            </div>
+          </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" aria-label="First name" required>
+            </div>
+           
+            <div class="col">
+                <select class="form-select" name="gender" aria-label="Default select example" required>
+                    <option selected>Gender</option>
+                    {% for eme in emergency %}
+                    <option value="1">{{eme.gender}}</option>
+                    {% endfor %}
+                    
+                  </select>
+            </div>
+          </div>
+        <div class="row g-3 mb-3">
+            <div class="col">
+                <select class="form-select" name="city" aria-label="Default select example" required>
+                    <option selected>City</option>
+                    <option value="1">Gadag</option>
+                    <option value="2">Hubli</option>
+                    <option value="3">Dharwad</option>
+                    <option value="4">Karwar</option>
+                    <option value="5">Haveri</option>
+                    <option value="6">Belagavi</option>
+                    <option value="7">Bengaluru</option>
+                    <option value="8">Mangaluru</option>
+                    <option value="9">Mysuru</option>
+                    <option value="10">Vijaypur</option>
+                  </select>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="pick_up" placeholder="Pick up address" aria-label="Last name" required> 
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="drop_addr" placeholder="Drop Address" aria-label="Last name" required>
+            </div>
+          </div>
+        <button type="submit " class="d-grid gap-2 col-6 mx-auto btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

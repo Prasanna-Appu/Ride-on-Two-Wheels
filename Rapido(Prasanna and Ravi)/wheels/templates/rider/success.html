@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container position-relative" >
+    <div class="card text-center position-absolute top-50 start-50 translate-middle">
+        <div class="card-header" style="font-weight: 800;">Here Your Payment Status</div>
+        <div class="card-body">
+          <h5 class="card-title btn-success">Success! Thank You</h5>
+          <p class="card-text">You Will Get Notified on Your Gmail and Whatsapp</p>
+          
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-primary">For More Service Click Here</a>
+      </div>
+</div>
+{% endblock %}

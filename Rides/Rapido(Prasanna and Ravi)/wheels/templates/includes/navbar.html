@@ -1,0 +1,70 @@
+{% load static %}
+<div class="px-2 py-2 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'bikelogo.png' %}" width="70" height="40" class="d-inline-block align-top" alt="">
+          Ride On 2 Wheels
+        </a>
+      </nav>
+      <a href="{% url 'home' %}"
+        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+        <li>
+          <a href="{% url 'home' %}" class="nav-link text-secondary">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}" class="nav-link text-white">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+              <use xlink:href="#speedometer2"></use>
+            </svg>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'services' %}" class="nav-link text-white">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+              <use xlink:href="#grid"></use>
+            </svg>
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'careers' %}" class="nav-link text-white">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+              <use xlink:href="#people-circle"></use>
+            </svg>
+            Careers
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'contact' %}" class="nav-link text-white">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+              <use xlink:href="#table"></use>
+            </svg>
+            Contact
+          </a>
+        </li>
+      </ul>
+      {% if user.is_authenticated %}
+      <oi class="btn btn-outline-warning btn-lg disabled" style="font-family: 'IM Fell DW Pica', serif;">Hi,
+        {{user.username}}</oi>
+      <a href="{% url 'logout' %}" class="btn btn-warning mx-2">Logout</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-outline-primary text-white mx-2 " style="margin-bottom: -2%;">Login</a>
+      <a href="{% url 'signup' %}" class="btn btn-outline-primary text-white" style="margin-bottom: -2%;">Signup</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

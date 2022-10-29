@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- cards -->
+<div class="container">
+  <div class="col mt-4">
+<div class="card bg-dark text-white">
+  <img src="/wheels/media/media/home/images/Screenshot (11).png" class="card-img" height="400px" alt=""/>
+  <div class="card-img-overlay">
+    <h5 class="card-title">Book A Ride</h5>
+    <p class="card-text">
+     We will pick you up from where you are and Drop You down Where you Need to be
+    </p>
+    <p class="card-text">Last updated 3 mins ago</p>
+    <a href="{% url 'bookaride' %}" class="btn btn-primary">Book a Ride</a>
+  </div>
+</div>
+</div>
+<br>
+
+
+
+<div class="card bg-dark text-white">
+  <img src="/wheels/media/media/home/images/bikecard.webp" class="card-img" height="400px" alt="Stony Beach"/>
+  <div class="card-img-overlay">
+    <br>
+    <br>
+    <h5 class="card-title">Emergency Ride</h5>
+    <p class="card-text">
+      Being Prepared for a Emergency Work is like being Prepared for any Other Important Event in Life.
+    </p>
+    <p class="card-text">Last updated 3 mins ago</p>
+    <button type="buttont" class="btn btn-primary">Emergency Ride</button>
+  </div>
+</div>
+<br>
+
+
+
+
+
+<div class="card bg-dark text-white">
+  <img src="/wheels/media/media/home/images/bikes.webp" class="card-img" height="400px" alt="Stony Beach"/>
+  <div class="card-img-overlay">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h5 class="card-title">Rent a Bike</h5>
+    <p class="card-text">
+      If You Want to Enjoy the Ride By Yourself and Feel like it's your Own Bike then Rent our Bike.
+    </p>
+    <p class="card-text">Last updated 3 mins ago</p>
+    <br>
+    <button type="buttont" class="btn btn-primary">Rent a Bike</button>  
+  </div>
+</div>
+
+</div>
+  <br>
+
+
+
+
+
+  <div class="card bg-dark text-white" style="margin: 80px;">
+    <img src="/wheels/media/media/home/images/b9.jpg" class="card-img" alt="Stony Beach" />
+    <div class="card-img-overlay">
+      <h5 class="card-title">TECNICAL EVENTS</h5>
+      <p class="card-text">
+        About Event:A technical event defines the drivers of the business at the technical level; the things
+        that result in business activity starting or modifying the business process. This guideline explains how to find
+        and define business events.Technical events like exhibitions, seminars, workshops by senior experts in various
+        subjects give more ideas. It expand your thinking.
+      </p>
+      <a href="{% url 'bookaride' %}" class="btn" type="submit" style="color:#DDD101 ;">Join Now</a>
+    </div>
+  </div>
+
+  {% endblock%}

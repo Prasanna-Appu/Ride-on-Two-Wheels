@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container z-depth-1 my-5 px-0 ">
+
+    <!--Section: Content-->
+    <section class="my-md-5"
+        style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/People/12-col/img%20(85).jpg'); background-size: cover; background-position: center center;">
+
+        <div class="rgba-black-strong rounded p-5">
+
+            <!-- Section heading -->
+            <h3 class="text-center font-weight-bold text-black mt-3 mb-5 display-4 animate__animated animate__fadeInLeftBig">-:Contact Us:-</h3>
+
+            <form class="mx-md-5" action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+
+                        <div class="card" style="background-color:transparent;">
+                            <div class="card-body px-4">
+
+                                <!-- Name -->
+                                <div class="md-form md-outline mt-0 mb-4">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+
+                                </div>
+                                <!-- Email -->
+                                <div class="md-form md-outline mb-4">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Email address">
+
+                                </div> 
+                                <!-- Phone -->
+                                <div class="md-form md-outline mb-4">
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone">
+                                </div> 
+                                <!-- Address -->
+                                <div class="md-form md-outline mb-4">
+                                    <input type="text" id="address" name="address" class="form-control" placeholder="Address">
+
+                                </div> 
+                                <!-- Message -->
+                                <div class="md-form md-outline mb-4">
+                                    <textarea id="message" name="message" class="md-textarea form-control" placeholder="Your Message"
+                                        rows="3"></textarea>
+
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit
+                                    inquiry</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 offset-md-1 mt-md-4 mb-4 text-white">
+
+                        <h5 class="font-weight-bold ">Address</h5>
+                        <p class="mb-0">KLE JT BCA College Gadag</p>
+                        <p class="mb-0"> Karnataka 582101</p>
+                        <p class="mb-4 pb-2">India</p>
+
+                        <h5 class="font-weight-bold">Phone</h5>
+                        <p class="mb-4 pb-2">+91 8746805689</p>
+
+                        <h5 class="font-weight-bold">Email</h5>
+                        <p>ridewithus@gmail.com</p>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+{% endblock %}

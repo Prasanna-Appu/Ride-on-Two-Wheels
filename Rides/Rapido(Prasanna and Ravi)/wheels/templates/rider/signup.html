@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" style="background-color:khaki">
+    <h1 class="animate__animated animate__bounce text-center" style="font-family: 'IM Fell DW Pica', serif; color: #46B2E0;">Signup Here</h1>
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                        class="img-fluid" alt="Phone image">
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <form method="POST" action="{% url 'signup' %}">
+                        {% csrf_token %}
+                        <div class="form-outline mb-4">
+                            <input name="firstname" class="form-control form-control-lg" />
+                            <label class="form-label">First Name </label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input name="lastname" class="form-control form-control-lg" />
+                            <label class="form-label">Last Name</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input name="username" class="form-control form-control-lg" />
+                            <label class="form-label">User Name</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input name="email" class="form-control form-control-lg" />
+                            <label class="form-label">Email Address</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input name="number"  class="form-control form-control-lg" />
+                            <label class="form-label">Aadhar Number</label>
+                        </div>
+
+
+
+                        <div class="form-outline mb-4">
+                            <input name="password" type="password" class="form-control form-control-lg" />
+                            <label class="form-label">Password</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input name="confirm_password" type="password" class="form-control form-control-lg" />
+                            <label class="form-label">Confirm Password</label>
+                        </div>
+                       
+                        
+                    
+                        <button type="submit" class="btn btn-accent form-btn w-100 mt-3 mb-3">Signup</button>
+                        <div class="text-center">
+                          OR
+                        </div>
+                       
+                        <button class="btn btn-primary form-btn w-100 mt-3 mb-3">Signup With Google</button>
+                    
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+
